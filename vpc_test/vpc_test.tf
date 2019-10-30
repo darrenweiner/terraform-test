@@ -8,6 +8,7 @@ variable "base_cidr_block" {
 variable "availability_zones" {
   description = "A list of availability zones in which to create subnets"
   type = list(string)
+  default = ['us-west-2','us-east-1']
 }
 
 provider "aws" {
