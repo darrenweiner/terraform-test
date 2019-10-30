@@ -1,9 +1,10 @@
+variable secret_key {}
+variable access_key {}
 
 module "aws" {
   source = "./aws"
 access_key = TF_VAR_access_key
 secret_key = TF_VAR_secret_key
-region = "us-west-2"
 }
 module "sqs" {
   source = "./sqs"
