@@ -1,5 +1,5 @@
-variable "secret_key" {}
-variable "access_key" {}
+variable "TF_VAR_secret_key" {}
+variable "TF_VAR_access_key" {}
 
 
 module "aws" {
