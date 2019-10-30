@@ -1,3 +1,7 @@
+
+module "aws" {
+  source = "./aws"
+}
 module "sqs" {
   source = "./sqs"
 }
