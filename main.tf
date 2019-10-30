@@ -1,11 +1,11 @@
-variable "TF_VAR_secret_key" {}
-variable "TF_VAR_access_key" {}
+variable "secret_key" {}
+variable "access_key" {}
 
 
 module "aws" {
   source = "./aws"
-access_key = TF_VAR_access_key
-secret_key = TF_VAR_secret_key
+access_key = var.access_key
+secret_key = var.secret_key
 }
 
 module "sqs" {
