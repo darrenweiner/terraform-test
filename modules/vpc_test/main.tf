@@ -1,9 +1,3 @@
-provider "aws" "vpc" {
-  region     = "us-west-2"
-  access_key = var.access_key
-  secret_key = var.secret_key
-}
-
 variable "aws_region" {
     type = string
 }
@@ -16,10 +10,6 @@ variable "base_cidr_block" {
 variable "availability_zones" {
   description = "A list of availability zones in which to create subnets"
   type = list(string)
-}
-
-provider "aws" {
-  region = var.aws_region
 }
 
 resource "aws_vpc" "main" {
